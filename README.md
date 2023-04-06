@@ -12,7 +12,7 @@ Commands
 
 ```bash
     # clone github repo
-    $ git clone https://github.com/bhimrazy/express-blog-api
+    $ git clone https://github.com/mjsoltani/express-blog-api.git
     $ cd express-blog-api
     $ cp .env.example .env
 

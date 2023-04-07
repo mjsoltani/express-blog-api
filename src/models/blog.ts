@@ -13,7 +13,7 @@ const blogSchema = new Schema(
       required: [true, "Blog description required"],
     },
     image: String,
-    tags: {
+    tags: { // in our Models we defined it as category
       type: Array,
       required: false,
     },

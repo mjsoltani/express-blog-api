@@ -19,4 +19,8 @@ export const BlogService = {
   deleteBlog: async (id: any) => {
     return await Blog.findByIdAndDelete(id);
   },
+
+  recentBlog: async () => {
+    return await Blog.find().sort({ date: -1 }).limit(10);
+  },
 };

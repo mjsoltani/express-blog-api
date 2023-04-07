@@ -68,3 +68,17 @@ export const deleteBlog = async (req: Request, res: Response) => {
     res.status(500).json({ status: "error", message: err.message });
   }
 };
+
+export const recentBlog = async (req: Request, res: Response) => {
+  try {
+    const blog = await BlogService.recentBlog();
+
+    res.json({
+      status: "success",
+      message: "recently blog is here",
+      data: Serializer.blogSerializer(blog),
+    });
+  } catch (err: any) {
+    res.status(500).json({ status: "error", message: err.message });
+  }
+};

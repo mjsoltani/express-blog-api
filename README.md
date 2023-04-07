@@ -96,6 +96,7 @@ Postman Docs: https://documenter.getpostman.com/view/8091590/2s8YRnmXTd
 
 ```
   GET     /api/v1/blogs/
+  GEt     /api/v1/blogs/recent
   GET     /api/v1/blogs/:id
   POST    /api/v1/blogs/
   PUT     /api/v1/blogs/:id

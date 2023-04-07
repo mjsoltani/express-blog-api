@@ -24,7 +24,9 @@ const userSchema = new Schema({
 });
 
 userSchema.pre("save", function (next) {
+  // eslint-disable-next-line
   var user = this;
+  
   bcrypt.hash(user.password, 10, function (err, hash) {
     if (err) {
       return next(err);

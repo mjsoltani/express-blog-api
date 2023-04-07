@@ -5,6 +5,7 @@ import {
   getBlogById,
   updateBlog,
   deleteBlog,
+  recentBlog,
 } from "../controllers/blogController";
 import { verifyUserToken } from "../middlewares/verifyUserToken";
 import {
@@ -23,4 +24,7 @@ blogRouter
   .get(getBlogById)
   .put(verifyUserToken, updateBlogDataValidator, updateBlog)
   .delete(verifyUserToken, deleteBlog);
+
+blogRouter.get("/recent", recentBlog);
+
 export default blogRouter;
